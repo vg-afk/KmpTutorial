@@ -45,6 +45,22 @@
 
 <img src="images/image5.png" alt="Скріншот проекту" width="300" />
 
+### Стилі тексту:
+
+Стилі тексту мають додаватися MaterialTheme.typography, а не індивідуально до кожного елемента тексту. Приклад
+
+```kotlin
+Text(
+    text = gameModel.activity.type,
+    style = MaterialTheme.typography.labelLarge,
+    color = MaterialTheme.colorScheme.primary,
+    overflow = TextOverflow.Ellipsis,
+    modifier = Modifier
+        .weight(1f)
+        .padding(horizontal = 8.dp)
+)
+```
+
 ### Важливо:
 
 Частини цих папок чи файлів не буде при створенні проекту, тому їх потрібно буде створити самому.
